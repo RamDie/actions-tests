@@ -1,0 +1,11 @@
+name: Output information
+on: workflow_dispatch
+jobs:
+  output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output github information
+        run: |
+          echo "GitHub repository: ${{ github.repository }}"
+          echo "GitHub actor: ${{ github.actor }}"
+          echo "GitHub event name: ${{ github.event_name }}"
